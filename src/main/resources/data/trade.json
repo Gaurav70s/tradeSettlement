@@ -1,0 +1,64 @@
+[{
+  "entity" : "Foo",
+  "instruction" : "B",
+  "agreedFx" : "0.6",
+  "currency" : "NOK",
+  "instructionDate" : "10-10-2018",
+  "settlementDate" : "13-10-2018",
+  "units" : "100",
+  "pricePerUnit" : "12.5"
+},{
+  "entity" : "Foo",
+  "instruction" : "S",
+  "agreedFx" : "0.1",
+  "currency" : "SEK",
+  "instructionDate" : "10-10-2018",
+  "settlementDate" : "13-10-2018",
+  "units" : "100",
+  "pricePerUnit" : "12.5"
+},{
+  "entity" : "Foo",
+  "instruction" : "B",
+  "agreedFx" : "0.2",
+  "currency" : "DEK",
+  "instructionDate" : "10-10-2018",
+  "settlementDate" : "13-10-2018",
+  "units" : "100",
+  "pricePerUnit" : "12.5"
+},{
+  "entity" : "Foo",
+  "instruction" : "S",
+  "agreedFx" : "0.3",
+  "currency" : "EUR",
+  "instructionDate" : "10-10-2018",
+  "settlementDate" : "13-10-2018",
+  "units" : "100",
+  "pricePerUnit" : "12.5"
+},{
+  "entity" : "Foo",
+  "instruction" : "B",
+  "agreedFx" : "0.4",
+  "currency" : "AED",
+  "instructionDate" : "10-10-2018",
+  "settlementDate" : "13-10-2018",
+  "units" : "100",
+  "pricePerUnit" : "12.5"
+},{
+  "entity" : "Foo",
+  "instruction" : "S",
+  "agreedFx" : "0.6",
+  "currency" : "INR",
+  "instructionDate" : "10-10-2018",
+  "settlementDate" : "13-10-2018",
+  "units" : "100",
+  "pricePerUnit" : "12.5"
+},{
+  "entity" : "Foo",
+  "instruction" : "B",
+  "agreedFx" : "0.8",
+  "currency" : "SAR",
+  "instructionDate" : "10-10-2018",
+  "settlementDate" : "13-10-2018",
+  "units" : "100",
+  "pricePerUnit" : "12.5"
+}]

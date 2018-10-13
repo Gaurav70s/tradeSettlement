@@ -1,5 +1,7 @@
 package com.jpmorgan.test.dao;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -9,7 +11,9 @@ public class Trade {
     private char instruction ;
     private BigDecimal agreedFx ;
     private String currency ;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date instructionDate ;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date settlementDate ;
     private Date actualSettlementDate;
     private int units ;
