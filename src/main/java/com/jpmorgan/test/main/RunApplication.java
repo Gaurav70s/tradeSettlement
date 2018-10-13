@@ -23,7 +23,7 @@ public class RunApplication {
         for(Trade trades : tradeList){
             tsService.settlement(trades);
         }
-        tsService.SettlementReport(tsService.getTradeReport(tradeList));
+        tsService.settlementReport(tsService.getTradeReport(tradeList));
         } catch (IOException e) {
             e.printStackTrace();
         }

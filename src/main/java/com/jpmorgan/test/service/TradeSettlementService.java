@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface TradeSettlementService {
 
-    Trade settlement(Trade trade);
+    void settlement(Trade trade);
 
     TradeReport getTradeReport(List<Trade> tradeList);
 
-    void SettlementReport(TradeReport report);
+    void settlementReport(TradeReport report);
 }

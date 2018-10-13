@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 public class TradeSettlementServiceImpl implements TradeSettlementService {
 
-    public Trade settlement(Trade trade) {
+    public void settlement(Trade trade) {
         Calendar date = Calendar.getInstance();
         date.setTime(trade.getSettlementDate());
         if(trade.getCurrency().equalsIgnoreCase("SAR") || trade.getCurrency().equalsIgnoreCase("AED")){
@@ -36,7 +36,6 @@ public class TradeSettlementServiceImpl implements TradeSettlementService {
             }
         }
         trade.setSettlementAmount(trade.getAgreedFx().multiply(new BigDecimal(trade.getUnits())).multiply(trade.getPricePerUnit()));
-        return trade;
     }
 
     public TradeReport getTradeReport(List<Trade> tradeList) {
@@ -65,7 +64,7 @@ public class TradeSettlementServiceImpl implements TradeSettlementService {
         return report;
     }
 
-    public void SettlementReport(TradeReport report) {
+    public void settlementReport(TradeReport report) {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Stream<Map.Entry<String,BigDecimal>> sortedIncomingEntity =
@@ -85,18 +84,14 @@ public class TradeSettlementServiceImpl implements TradeSettlementService {
         if(!report.getIncomingEntity().isEmpty()) {
             System.out.println("Ranking of Incoming Fund");
             System.out.println("Rank    Entity  Amount");
-            sortedIncomingEntity.forEach(e -> {
-                System.out.println(counter.addAndGet(1) + "      " + e.getKey() + "        " + e.getValue()+ " USD");
-            });
+            sortedIncomingEntity.forEach(e -> System.out.println(counter.addAndGet(1) + "      " + e.getKey() + "        " + e.getValue()+ " USD"));
         }
         if(!report.getOutgoingEntity().isEmpty()) {
             System.out.println("*********************************************************************");
             System.out.println("Ranking of Outgoing Fund");
             System.out.println("Rank    Entity  Amount");
             counter.getAndSet(0);
-            sortedOutgoingEntity.forEach(e -> {
-                System.out.println(counter.addAndGet(1) + "      " + e.getKey() + "        " + e.getValue()+ " USD");
-            });
+            sortedOutgoingEntity.forEach(e -> System.out.println(counter.addAndGet(1) + "      " + e.getKey() + "        " + e.getValue()+ " USD"));
         }
         System.out.println("********************************************************************");
         System.out.println("                         End of Report                         ");
